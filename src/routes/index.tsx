@@ -16,17 +16,17 @@ const PRESTAMYPE = "https://www.prestamype.com";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cuenta de ahorro vs Factoring | Rentabilidad hasta 20% | Prestamype" },
+      { title: "Depósito a plazo fijo vs Factoring | Prestamype" },
       {
         name: "description",
         content:
-          "Compara una cuenta de ahorro de alto rendimiento con la inversión en factoring: hasta 4 veces más intereses por tu dinero. Invierte desde S/100 con Prestamype.",
+          "Compara un depósito a plazo fijo con la inversión en factoring y descubre una rentabilidad potencial de hasta 20% anual. Invierte desde S/100 con Prestamype.",
       },
-      { property: "og:title", content: "Cuentas de ahorro vs Factoring | Prestamype" },
+      { property: "og:title", content: "Depósito a plazo fijo vs Factoring | Prestamype" },
       {
         property: "og:description",
         content:
-          "Tu dinero puede generar hasta 4 veces más intereses invirtiendo en factoring que en una cuenta de ahorro de alto rendimiento.",
+          "Tu dinero puede rendir hasta 3 veces más invirtiendo en factoring sin inmovilizarlo en un plazo fijo.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -134,15 +134,19 @@ const comparativa = [
   {
     c: "Monto mínimo",
     ahorro:
-      "Variable, usualmente sin monto mínimo alto, pero con montos de mantenimiento para tasa preferencial.",
+      "Suele requerir montos más altos (varía por banco, comúnmente desde S/500 a S/1,000 o más).",
     factoring: "S/100 o $25",
   },
   {
     c: "Rentabilidad",
-    ahorro: "Hasta 4.5% anual (sin cobro de mantenimiento)",
+    ahorro: "Hasta 5.5% anual",
     factoring: "Hasta 20% anual",
   },
-  { c: "Plazos", ahorro: "Disponibilidad inmediata", factoring: "15 a 180 días" },
+  {
+    c: "Plazos",
+    ahorro: "Fijo y obligatorio (30, 90, 180, 360+ días); penalidad si retiras antes",
+    factoring: "15 a 180 días",
+  },
   { c: "Riesgo", ahorro: "Bajo", factoring: "Medio" },
   {
     c: "Respaldo",
@@ -294,11 +298,11 @@ function Landing() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
           <div>
             <h1 className="text-4xl leading-tight font-extrabold md:text-5xl">
-              Cuentas de ahorro <span className="text-primary-dark">vs</span> Factoring
+              Depósito a plazo fijo <span className="text-primary-dark">vs</span> Factoring
             </h1>
             <p className="mt-5 max-w-xl text-lg text-foreground/80">
-              Tu dinero puede generar hasta 4 veces más intereses invirtiendo en factoring que en
-              una cuenta de ahorro de alto rendimiento.
+              Tu dinero puede rendir hasta 3 veces más invirtiendo en factoring sin inmovilizarlo en
+              un plazo fijo.
             </p>
             <CtaButton className="mt-8">Invierte en factoring</CtaButton>
           </div>
@@ -310,11 +314,13 @@ function Landing() {
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-14">
           <div>
-            <h2 className="text-3xl font-bold md:text-4xl">¿Cuenta de ahorro o Factoring?</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">¿Depósito a plazo fijo o Factoring?</h2>
             <p className="mt-5 text-base text-muted-foreground">
-              Tanto una cuenta de ahorro como el factoring te permiten generar rendimientos por tu
-              dinero, pero el factoring ofrece una rentabilidad mayor al invertir en facturas de
-              empresas y recibir intereses por tu inversión. Conoce las principales diferencias.
+              Tanto un depósito a plazo fijo como el factoring te permiten generar rentabilidad por
+              tu dinero, pero se diferencian en el nivel de rentabilidad y la flexibilidad para
+              disponer de tu inversión. Mientras el plazo fijo mantiene tu dinero por un periodo
+              determinado, el factoring te permite invertir a plazos más cortos y acceder a una
+              mayor rentabilidad potencial. Conoce las principales diferencias.
             </p>
             <CtaButton className="mt-7">Invierte en factoring</CtaButton>
           </div>
@@ -324,7 +330,7 @@ function Landing() {
               <thead>
                 <tr>
                   <th className="bg-muted p-4 font-semibold text-navy">Características</th>
-                  <th className="bg-muted p-4 font-semibold text-navy">Cuentas de ahorro</th>
+                  <th className="bg-muted p-4 font-semibold text-navy">Depósito a plazo fijo</th>
                   <th className="bg-primary p-4 font-semibold text-primary-foreground">Factoring</th>
                 </tr>
               </thead>
@@ -343,8 +349,8 @@ function Landing() {
 
         <p className="mx-auto mt-12 max-w-3xl text-center text-xs leading-relaxed text-muted-foreground italic">
           Por ejemplo, si invirtieras S/5,000 durante un año, una rentabilidad de 20% podría generar
-          hasta S/1,000 de ganancia, mientras que una tasa de 4.5% en una cuenta de ahorro generaría
-          S/225.
+          hasta S/1,000 de ganancia, mientras que una tasa de 5.5% en un depósito a plazo fijo
+          generaría S/275.
         </p>
       </section>
 
