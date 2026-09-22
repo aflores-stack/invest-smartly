@@ -147,7 +147,6 @@ const comparativa = [
     ahorro: "Fijo y obligatorio (30, 90, 180, 360+ días); penalidad si retiras antes",
     factoring: "15 a 180 días",
   },
-  { c: "Riesgo", ahorro: "Bajo", factoring: "Medio" },
   {
     c: "Respaldo",
     ahorro: "Fondo de Seguro de Depósitos (FSD)",
